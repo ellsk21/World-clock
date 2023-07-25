@@ -8,6 +8,15 @@ function updateTime() {
   losAngelesTimeElement.innerHTML = losAngelesTime.format(
     "h:mm:ss[<small>]A[</small>]"
   );
+  // hawaii
+  let hawaiiElement = document.querySelector("#hawaii");
+  let hawaiiTimeElement = hawaiiElement.querySelector(".time");
+  let hawaiiDateElement = hawaiiElement.querySelector(".date");
+  let hawaiiTime = moment().tz("US/Hawaii");
+  hawaiiDateElement.innerHTML = hawaiiTime.format("MMMM Do YYYY");
+  hawaiiTimeElement.innerHTML = hawaiiTime.format(
+    "h:mm:ss[<small>]A[</small>]"
+  );
 
   // dubai
   let dubaiElement = document.querySelector("#dubai");
@@ -24,16 +33,6 @@ function updateTime() {
   let madridTime = moment().tz("Europe/Madrid");
   madridDateElement.innerHTML = madridTime.format("MMMM Do YYYY");
   madridTimeElement.innerHTML = madridTime.format(
-    "h:mm:ss[<small>]A[</small>]"
-  );
-
-  // hawaii
-  let hawaiiElement = document.querySelector("#hawaii");
-  let hawaiiTimeElement = hawaiiElement.querySelector(".time");
-  let hawaiiDateElement = hawaiiElement.querySelector(".date");
-  let hawaiiTime = moment().tz("US/Hawaii");
-  hawaiiDateElement.innerHTML = hawaiiTime.format("MMMM Do YYYY");
-  hawaiiTimeElement.innerHTML = hawaiiTime.format(
     "h:mm:ss[<small>]A[</small>]"
   );
 }
